@@ -1,6 +1,6 @@
 /*
 The MIT License (MIT) 
-Copyright (c) <year> <copyright holders>
+Copyright (c) 2016 the hitlowman team http://github.com/hitlowman
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
@@ -9,9 +9,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 */
 
 /*
-Exports conversation functionality for all managed conversations.  conversations
+Exposes conversation functionality for all managed conversations.  conversations
 are designed to gather enough user input in an async manner to execute a 
 resulting command
+
+TODO:  split this file into seperate files for each conversation and use require
+to pull in each conversation
 */
 
 

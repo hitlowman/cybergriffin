@@ -9,17 +9,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 */
 
 /*
-Common functionality for use across the entire application
+Routes for express website are configured here
 */
 
-export const EPOCH = new Date("13 Nov 2016")
+import express from 'express';
 
-export const TICKDURATION = '60000' // ms
+const router = express.Router();
 
-export function getTick() {
-    return Math.floor((new Date()- EPOCH) / TICKDURATION)
-}
+router.get('/', (req, res, next) => {
+  res.render('index', { title: 'Express' });
+});
 
-export const CONTEXT = {
-
-}
+export default router;

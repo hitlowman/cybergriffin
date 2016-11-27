@@ -9,17 +9,37 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 */
 
 /*
-Common functionality for use across the entire application
+Express app for hosting web site
 */
 
-export const EPOCH = new Date("13 Nov 2016")
+import express from 'express'
+import cookieParser from 'cookie-parser';
+import bodyParser from 'body-parser';
+import compression from 'compression';
+import path from 'path'
 
-export const TICKDURATION = '60000' // ms
+import index from './routes/index'
 
-export function getTick() {
-    return Math.floor((new Date()- EPOCH) / TICKDURATION)
-}
+const app = express()
 
-export const CONTEXT = {
 
-}
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+
+
+app.use(express.static(path.join(__dirname, 'public')))
+app.use('/', index)
+
+app.use((err, req, res, next) => {
+    res.status(err.status || 500)
+    res.render('error', {
+        message: err.message,
+        error: err
+    })
+})
+
+export default app;

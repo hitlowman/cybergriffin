@@ -9,17 +9,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 */
 
 /*
-Common functionality for use across the entire application
+This is the main entry point when running this source as web site
+
 */
 
-export const EPOCH = new Date("13 Nov 2016")
+import app from '../www/app.js'
 
-export const TICKDURATION = '60000' // ms
-
-export function getTick() {
-    return Math.floor((new Date()- EPOCH) / TICKDURATION)
-}
-
-export const CONTEXT = {
-
-}
+app.listen(3000)

@@ -13,9 +13,14 @@
   "author": "628426@gmail.com and the hitlowman team",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "cookie-parser": "^1.4.3",
     "dotenv": "^2.0.0",
+    "express": "^4.14.0",
     "firebase": "^3.6.0",
     "firebase-admin": "^4.0.2",
+    "pug": "^2.0.0-beta6",
     "readline-sync": "^1.4.5"
   },
   "devDependencies": {
