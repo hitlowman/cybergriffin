@@ -20,6 +20,8 @@ import path from 'path'
 
 import index from './routes/index'
 
+import config from './config.json'
+
 const app = express()
 
 

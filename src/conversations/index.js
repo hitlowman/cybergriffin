@@ -194,6 +194,13 @@ export const CONVERSATIONS = {
     RESEARCH: {}
 }
 
+
+export class ProviderMedium {
+    constructor(provider) {
+        this.provider = provider;
+    }
+}
+
 export const ConsoleMedium = {
     question: function (prompt, cb) {
         try {

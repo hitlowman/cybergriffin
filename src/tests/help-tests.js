@@ -11,8 +11,8 @@ import * as test from 'unit.js'
         test.string(node.title)
         test.string(node.description)
 
-        console.log(`${padchar} ${node.title}`)
-        console.log(`${padchar} ${node.description}`)
+        console.log(`HELP TITLE: ${padchar} ${node.title}`)
+        console.log(`HELP DESCRIPTION: ${padchar} ${node.description}`)
 
         if (node.CHILDITEMS) {
             for (let child of node.CHILDITEMS) {

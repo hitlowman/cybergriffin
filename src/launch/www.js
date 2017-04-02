@@ -15,4 +15,4 @@ This is the main entry point when running this source as web site
 
 import app from '../www/app.js'
 
-app.listen(3000)
+app.listen(process.env.PORT || 3000)

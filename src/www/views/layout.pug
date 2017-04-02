@@ -12,9 +12,8 @@ html(lang='en')
     block head
 
   body(ng-app=app, ng-controller=controller)
-
-    block content
-
+    div(layout='row')
+      block content
 
     script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js')
     |   
